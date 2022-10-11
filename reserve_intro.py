@@ -11,10 +11,6 @@ con = pymysql.connect(
     database='library'
     )
 
-#doesnt account for the case where YOU can keep reserving the same book?
-#check if my reserve date is updating
-#make sure that book reservation is checking both fines AS WELL AS if theres books overdue but not returned
-
 
 class reserve_window:
     def __init__(self, root):
