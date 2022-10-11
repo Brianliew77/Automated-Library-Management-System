@@ -279,32 +279,7 @@ class class_acquisition:
 
         
         messagebox.showinfo("showinfo", "Success! \n ALS Book Acquisition Successful.")
-##        self.auto_withdraw(real_isbn)
         self.root.destroy()
-        
-##    def auto_withdraw(self,isbn):
-##
-##        con = pymysql.connect(
-##            host='localhost',
-##            user='root',
-##            password='xuan1234', #CHANGE THIS
-##            database='library'
-##            )
-##
-##        with con:
-##            with con.cursor() as cursor:
-##                    t = f'SELECT * FROM library.book WHERE isbn = "{isbn}" '
-##                    cursor.execute(t)
-##                    result = cursor.fetchall()
-##                    updated = int(result[0][4])
-##                    for i in result:
-##                        if int(i[4]) > updated:
-##                            updated = int(i[4])
-##                    for x in result:
-##                        if x[2] != updated:
-##                            t2 = 'DELETE FROM library.book WHERE accession_number = %s; '
-##                            cursor.execute(t2, x[0])
-##                            con.commit()
 
 class class_withdrawal:
     def __init__(self, root):
@@ -559,3 +534,4 @@ class withdraw_func_class:
                     return False
                 else:
                     return True
+
